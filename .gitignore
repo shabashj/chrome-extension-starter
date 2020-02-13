@@ -1,2 +1,9 @@
 node_modules/
 .DS_store
+.idea/.gitignore
+.idea/codeStyles/
+.idea/dbnavigator.xml
+.idea/extensionDemo.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml

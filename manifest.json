@@ -3,15 +3,39 @@
   "version": "1.0",
   "name": "Hello World!",
   "description": "Learning how to make a chrome extension!",
-  "icons":
-  {
+  "icons": {
     "16": "images/puppy.png",
     "48": "images/puppy.png",
     "128": "images/puppy.png"
   },
-  "browser_action":
-  {
+  "browser_action": {
     "default_icon": "images/puppy.png",
     "default_popup": "popup.html"
-  }
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "all_frames": false,
+      "run_at": "document_end",
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "script.js"
+      ]
+    }
+  ],
+  "permissions": [ "<all_urls>", "tabs", "webNavigation", "storage", "identity" ],
+  "web_accessible_resources": [
+    "icons/*.png",
+    "icons/*.svg",
+    "fonts/*",
+    "*.ttf",
+    "*.html",
+    "config.json"
+  ]
 }
