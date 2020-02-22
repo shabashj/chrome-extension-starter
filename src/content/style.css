@@ -1,0 +1,9 @@
+.myClass {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 100px;
+  height: 100px;
+  background: hotpink;
+  z-index: 10000000;
+}
